@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Downloader</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <form action = "http://localhost:5000/manage_response" method = "post" class="spotify">
+        <h2>Spotify Downloader</h2>
+        <h4>a web interface for the "spotdl" python package - self-hosted</h4>
+        <p>Link: <input name="spotify-link" id="link"></p>
+        <p>Path: <input name="output_path" id="outdir"></p>
+        <button type="submit" id="download">Download</button>
+        <div class="message">
+            <h5>Message:</h5>
+            <br>
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+        </div>
+
+    </form>
+</body>
+</html>
