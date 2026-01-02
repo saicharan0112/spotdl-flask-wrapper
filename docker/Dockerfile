@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.13-alpine
 
 # Install dependencies for adding a user dynamically
 RUN apk add --no-cache shadow bash su-exec ffmpeg
